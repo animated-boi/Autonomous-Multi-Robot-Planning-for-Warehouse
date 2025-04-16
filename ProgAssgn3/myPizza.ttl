@@ -1,0 +1,501 @@
+@prefix : <http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl/> .
+
+<http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#comesInSizes
+:comesInSizes rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#hasBase
+:hasBase rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#hasSauce
+:hasSauce rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#hasTopping
+:hasTopping rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#isFrom
+:isFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#isVeg
+:isVeg rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#America
+:America rdf:type owl:Class ;
+         rdfs:subClassOf :Nation .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#AmericanPizza
+:AmericanPizza rdf:type owl:Class ;
+               rdfs:subClassOf :NamedPizza ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :comesInSizes ;
+                                 owl:someValuesFrom :Large
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :comesInSizes ;
+                                 owl:someValuesFrom :Small
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :comesInSizes ;
+                                 owl:someValuesFrom :XLarge
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasBase ;
+                                 owl:someValuesFrom :HandTossedBase
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasBase ;
+                                 owl:someValuesFrom :ThinCrustBase
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasSauce ;
+                                 owl:someValuesFrom :WildSauce
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTopping ;
+                                 owl:someValuesFrom :MozzarellaTopping
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTopping ;
+                                 owl:someValuesFrom :PepperoniTopping
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTopping ;
+                                 owl:someValuesFrom :TomatoTopping
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isFrom ;
+                                 owl:allValuesFrom :America
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isVeg ;
+                                 owl:allValuesFrom :No
+                               ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#CheeseBurstBase
+:CheeseBurstBase rdf:type owl:Class ;
+                 rdfs:subClassOf :PizzaBase .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#CheeseTopping
+:CheeseTopping rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#CornTopping
+:CornTopping rdf:type owl:Class ;
+             rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#GoldenCornPizza
+:GoldenCornPizza rdf:type owl:Class ;
+                 rdfs:subClassOf :NamedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :comesInSizes ;
+                                   owl:someValuesFrom :Large
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :comesInSizes ;
+                                   owl:someValuesFrom :Medium
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :comesInSizes ;
+                                   owl:someValuesFrom :Small
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasBase ;
+                                   owl:someValuesFrom :CheeseBurstBase
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasBase ;
+                                   owl:someValuesFrom :HandTossedBase
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSauce ;
+                                   owl:someValuesFrom :GreenSauce
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSauce ;
+                                   owl:someValuesFrom :HeatSauce
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :CheeseTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :CornTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isFrom ;
+                                   owl:allValuesFrom :India
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isVeg ;
+                                   owl:allValuesFrom :Yes
+                                 ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#GreenSauce
+:GreenSauce rdf:type owl:Class ;
+            rdfs:subClassOf :Sauce .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#HandTossedBase
+:HandTossedBase rdf:type owl:Class ;
+                rdfs:subClassOf :PizzaBase .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#HeatSauce
+:HeatSauce rdf:type owl:Class ;
+           rdfs:subClassOf :Sauce .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#India
+:India rdf:type owl:Class ;
+       rdfs:subClassOf :Nation .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Large
+:Large rdf:type owl:Class ;
+       rdfs:subClassOf :SizeOption .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#MargheritaPizza
+:MargheritaPizza rdf:type owl:Class ;
+                 rdfs:subClassOf :NamedPizza ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :comesInSizes ;
+                                   owl:someValuesFrom :Large
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :comesInSizes ;
+                                   owl:someValuesFrom :Medium
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :comesInSizes ;
+                                   owl:someValuesFrom :XLarge
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasBase ;
+                                   owl:someValuesFrom :CheeseBurstBase
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasBase ;
+                                   owl:someValuesFrom :HandTossedBase
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasBase ;
+                                   owl:someValuesFrom :ThinCrustBase
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSauce ;
+                                   owl:someValuesFrom :HeatSauce
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSauce ;
+                                   owl:someValuesFrom :WildSauce
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :MozzarellaTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTopping ;
+                                   owl:someValuesFrom :TomatoTopping
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isFrom ;
+                                   owl:someValuesFrom :America
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isFrom ;
+                                   owl:someValuesFrom :India
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isVeg ;
+                                   owl:allValuesFrom :Yes
+                                 ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#MeatTopping
+:MeatTopping rdf:type owl:Class ;
+             rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#MeatyPizza
+:MeatyPizza rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasTopping ;
+                                                         owl:someValuesFrom :MeatTopping
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#MeatyVegetableTopping
+:MeatyVegetableTopping rdf:type owl:Class ;
+                       rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:subClassOf :SizeOption .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#MozzarellaTopping
+:MozzarellaTopping rdf:type owl:Class ;
+                   rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#NamedPizza
+:NamedPizza rdf:type owl:Class ;
+            rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Nation
+:Nation rdf:type owl:Class ;
+        rdfs:subClassOf :PizzaDomainConcept .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#No
+:No rdf:type owl:Class ;
+    rdfs:subClassOf :Vegetarian .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#OliveTopping
+:OliveTopping rdf:type owl:Class ;
+              rdfs:subClassOf :VegetableTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#PaneerTikkaPizza
+:PaneerTikkaPizza rdf:type owl:Class ;
+                  rdfs:subClassOf :NamedPizza ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :comesInSizes ;
+                                    owl:someValuesFrom :Large
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :comesInSizes ;
+                                    owl:someValuesFrom :Medium
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :comesInSizes ;
+                                    owl:someValuesFrom :Small
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasBase ;
+                                    owl:someValuesFrom :CheeseBurstBase
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasBase ;
+                                    owl:someValuesFrom :HandTossedBase
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasSauce ;
+                                    owl:someValuesFrom :GreenSauce
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTopping ;
+                                    owl:someValuesFrom :CheeseTopping
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTopping ;
+                                    owl:someValuesFrom :PaneerTopping
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isFrom ;
+                                    owl:allValuesFrom :India
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isVeg ;
+                                    owl:allValuesFrom :Yes
+                                  ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#PaneerTopping
+:PaneerTopping rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#ParmezanTopping
+:ParmezanTopping rdf:type owl:Class ;
+                 rdfs:subClassOf :CheeseTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#PepperoniTopping
+:PepperoniTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :MeatTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf :PizzaDomainConcept ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasBase ;
+                         owl:someValuesFrom :PizzaBase
+                       ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#PizzaBase
+:PizzaBase rdf:type owl:Class ;
+           rdfs:subClassOf :PizzaDomainConcept .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#PizzaDomainConcept
+:PizzaDomainConcept rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#PizzaTopping
+:PizzaTopping rdf:type owl:Class ;
+              rdfs:subClassOf :PizzaDomainConcept .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Sauce
+:Sauce rdf:type owl:Class ;
+       rdfs:subClassOf :PizzaDomainConcept .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#SizeOption
+:SizeOption rdf:type owl:Class ;
+            rdfs:subClassOf :PizzaDomainConcept .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Small
+:Small rdf:type owl:Class ;
+       rdfs:subClassOf :SizeOption .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#SohoPizza
+:SohoPizza rdf:type owl:Class ;
+           rdfs:subClassOf :NamedPizza ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :comesInSizes ;
+                             owl:someValuesFrom :Large
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :comesInSizes ;
+                             owl:someValuesFrom :XLarge
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSauce ;
+                             owl:someValuesFrom :GreenSauce
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSauce ;
+                             owl:someValuesFrom :WildSauce
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :MozzarellaTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :OliveTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :ParmezanTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTopping ;
+                             owl:someValuesFrom :TomatoTopping
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasBase ;
+                             owl:allValuesFrom :ThinCrustBase
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :isFrom ;
+                             owl:allValuesFrom :America
+                           ] .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#ThinCrustBase
+:ThinCrustBase rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaBase .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#TomatoTopping
+:TomatoTopping rdf:type owl:Class ;
+               rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#VegetableTopping
+:VegetableTopping rdf:type owl:Class ;
+                  rdfs:subClassOf :PizzaTopping .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Vegetarian
+:Vegetarian rdf:type owl:Class ;
+            rdfs:subClassOf :PizzaDomainConcept .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#WildSauce
+:WildSauce rdf:type owl:Class ;
+           rdfs:subClassOf :Sauce .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#XLarge
+:XLarge rdf:type owl:Class ;
+        rdfs:subClassOf :SizeOption .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#Yes
+:Yes rdf:type owl:Class ;
+     rdfs:subClassOf :Vegetarian .
+
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#meatyVegetableTopping
+:meatyVegetableTopping rdf:type owl:Class ;
+                       rdfs:subClassOf :MeatTopping .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/animesh/ontologies/2024/3/myPizza.owl#ThisPizza
+:ThisPizza rdf:type owl:NamedIndividual ,
+                    :AmericanPizza .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CheeseTopping
+                :MeatTopping
+                :MozzarellaTopping
+                :TomatoTopping
+                :VegetableTopping
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

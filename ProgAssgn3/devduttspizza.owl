@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sgaddam7/ontologies/2021/3/myPizza.owl#"
+     xml:base="http://www.semanticweb.org/sgaddam7/ontologies/2021/3/myPizza.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#America -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#America">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Nationality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#AmericanPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#AmericanPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RisingCrust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#America"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HoneyMustard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Spinach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Beef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Beef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NonVeg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Brazil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Brazil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Nationality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NonVeg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ChickenTikka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ChickenTikka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RisingCrust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Brazil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HoneyMustard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mayonnese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mushroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken_Supreme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken_Supreme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ThinCrust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Beef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Brazil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Ranch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mushroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CrustSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CrustSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HandTossed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HandTossed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HoneyMustard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HoneyMustard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Sauce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Italy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Italy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Nationality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MargheritaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MargheritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RisingCrust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Italy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#HoneyMustard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mayonnese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Ranch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mayonnese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mayonnese">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Sauce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatyVegetableTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatyVegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mushroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Mushroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Veg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Nationality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Nationality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NonVeg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NonVeg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#OliveTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#OliveTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Oregano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Oregano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#OvenBaked -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#OvenBaked">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ParmezanTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ParmezanTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Veg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PepperoniTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PepperoniTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NonVeg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Ranch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Ranch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Sauce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RedPeppers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RedPeppers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RisingCrust -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RisingCrust">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CrustSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Sauce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Sauce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#SohoPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasCrustSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#RisingCrust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Chicken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasNonVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasOriginatedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#America"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasSauce"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Ranch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#OliveTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ParmezanTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#hasVeg"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Spinach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Spinach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Spinach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Veg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ThinCrust -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ThinCrust">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CrustSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Veg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Veg">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaDomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#VegetableTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#meatyVegetableTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#meatyVegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ThisPizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#ThisPizza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#AmericanPizza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MeatTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#MozzarellaTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#TomatoTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#VegetableTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaBase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/devdutt/ontologies/2024/3/myPizza.owl#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
